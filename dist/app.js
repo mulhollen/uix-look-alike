@@ -105,16 +105,61 @@ var cookieArray = [
 module.exports = { cookieArray };
 },{}],2:[function(require,module,exports){
 "use strict";
+let $ = require('../lib/node_modules/jquery');
+let main = require('./main');
+
+function item(place, prev, next){
+    $("#cookiePick").empty('');
+    console.log("have i made it here?");
+    $("#cookiePick").append(`
+        <div class="gray">
+            <div class="d-flex justify-content-between">
+                <div class="flex-row">
+                    <a href="index.html">Home</a>
+                    <p> / </p>
+                    <a href="shop.html">SHOP</a>
+                    <p> / </p>
+                    <p class="text-capitalize">${place.name}</p>                        
+                </div>
+                <div class="flex-row">
+                    <p> < </p>
+                    <a href="" id="${prev}">Prev</a>
+                    <p> | </p>
+                    <a href="" id="${next}">Next</a>
+                    <p> > </p>                        
+                </div>
+            <div>
+                <div>
+                    // needs to be bootstrap gallery
+                    <img src="${place.cookie}">
+                    <p>${place.description}</p>
+                </div>
+                <div>
+                    <h1>${place.name}</h1>
+                    <h3>SKU: ${place.sku}</h3>
+                    <h4>${place.price}</h4>
+                    <p>Quantity</p>
+                    <input type="text">
+                    <button text="ADD TO CART>
+                    //  accordian
+                </div>
+            </div>
+        </div>
+    `);
+}
+
+module.exports = { item };
+},{"../lib/node_modules/jquery":4,"./main":3}],3:[function(require,module,exports){
+"use strict";
 
 let $ = require('../lib/node_modules/jquery');
 let cookie = require('./cookie');
-
+let itemPage = require('./item');
 
 function displayCookies(array) {
-    console.log("ummmm hello?");
     $("#main").append(`        
-        <div class="gray py-5 mb-0">
-            <h1 class="text-capitalize pt-5 pb-0">Pick your cookies</h1>
+        <div id="cookiePick" class="gray py-5 mb-0">
+            <h1 class="text-capitalize text-center pt-5 pb-0">Pick your cookies</h1>
             <div class="d-flex body-max justify-content-around my-5">
                 <div id="cookieTown" class="d-flex flex-row justify-content-center align-items-center row">
                 </div>
@@ -123,19 +168,48 @@ function displayCookies(array) {
     for (let i = 0; i < array.length; i++){
             $("#cookieTown").append(`
                 <div class="row col-md-4">
-                    <div id="${array[i].sku}" class="d-flex flex-column">
-                        <img class="shop-img m-1" src="${array[i].cookie}">
+                    <div class="d-flex flex-column">
+                        <img id="${array[i].sku}" class="shop-img m-1" src="${array[i].cookie}" onmouseover="this.src='${array[i].broken}'" onmouseout="this.src='${array[i].cookie}'"> 
                         <h3 class="text-center">${array[i].name}</h3>
                         <p class="text-center">${array[i].price}</p>
                     </div>
                 </div>
             `);
     }
+
 }
+
+document.querySelector('#cookieTown').addEventListener('click', (event) => {
+    if (event.target.id === "0001"){
+        itemPage.item(cookie.cookieArray[0], cookie.cookieArray[11].sku, cookie.cookieArray[1].sku);
+    } else if (event.target.id === "0002") {
+        itemPage.item(cookie.cookieArray[1], cookie.cookieArray[0].sku, cookie.cookieArray[2].sku);
+    } else if (event.target.id === "0003") {
+        itemPage.item(cookie.cookieArray[2], cookie.cookieArray[1].sku, cookie.cookieArray[3].sku);
+    } else if (event.target.id === "0004") {
+        itemPage.item(cookie.cookieArray[3], cookie.cookieArray[2].sku, cookie.cookieArray[4].sku);
+    } else if (event.target.id === "0005") {
+        itemPage.item(cookie.cookieArray[4], cookie.cookieArray[3].sku, cookie.cookieArray[5].sku);
+    } else if (event.target.id === "0006") {
+        itemPage.item(cookie.cookieArray[5], cookie.cookieArray[4].sku, cookie.cookieArray[6].sku);
+    } else if (event.target.id === "0007") {
+        itemPage.item(cookie.cookieArray[6], cookie.cookieArray[5].sku, cookie.cookieArray[7].sku);
+    } else if (event.target.id === "0008") {
+        itemPage.item(cookie.cookieArray[7], cookie.cookieArray[6].sku, cookie.cookieArray[8].sku);
+    } else if (event.target.id === "0009") {
+        itemPage.item(cookie.cookieArray[8], cookie.cookieArray[7].sku, cookie.cookieArray[9].sku);
+    } else if (event.target.id === "0010") {
+        itemPage.item(cookie.cookieArray[9], cookie.cookieArray[8].sku, cookie.cookieArray[10].sku);
+    } else if (event.target.id === "0011") {
+        itemPage.item(cookie.cookieArray[10], cookie.cookieArray[9].sku, cookie.cookieArray[11].sku);
+    } else if (event.target.id === "0012") {
+        itemPage.item(cookie.cookieArray[11], cookie.cookieArray[10].sku, cookie.cookieArray[1].sku);
+    }
+});
 
 
 displayCookies(cookie.cookieArray);
-},{"../lib/node_modules/jquery":3,"./cookie":1}],3:[function(require,module,exports){
+},{"../lib/node_modules/jquery":4,"./cookie":1,"./item":2}],4:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v3.3.1
  * https://jquery.com/
@@ -10501,4 +10575,4 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-},{}]},{},[2]);
+},{}]},{},[3]);

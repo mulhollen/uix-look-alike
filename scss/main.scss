@@ -104,3 +104,19 @@ footer {
     width: 275px;
     height: 275px;
 }
+
+.card {
+        position: relative;
+        display: inline-block;
+}
+
+    .card .img-top {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+}
+.card:hover .img-top {
+        display: inline;
+}
