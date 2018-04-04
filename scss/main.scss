@@ -195,6 +195,38 @@ footer {
   text-decoration: none;
 }
 
+#accordion {
+    border-top: 1px solid $black;
+}
+
+.card-header {
+    background-color: $gray;
+    box-shadow: none;
+    border-bottom: 1px solid $black;
+}
+
+.btnCord,
+.btnCord:active,
+.btnCord:hover {
+    a{
+        color: $black;
+        font-size: 1rem;
+        text-decoration: none;
+    }
+    font-size: 1rem;
+    color: $black;
+    font-family: $sans;
+    background: $gray;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 0;
+}
+
+.plusBorder {
+    border-top: 1px solid $black;
+}
+
 .line {
     border-bottom: 1px solid $black;
 }

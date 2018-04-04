@@ -147,6 +147,35 @@ footer {
     color: #fff;
     font-size: 1rem; }
 
+#accordion {
+  border-top: 1px solid #191919; }
+
+.card-header {
+  background-color: #f3f3f5;
+  box-shadow: none;
+  border-bottom: 1px solid #191919; }
+
+.btnCord,
+.btnCord:active,
+.btnCord:hover {
+  font-size: 1rem;
+  color: #191919;
+  font-family: "Nunito", sans-serif;
+  background: #f3f3f5;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 0; }
+  .btnCord a,
+  .btnCord:active a,
+  .btnCord:hover a {
+    color: #191919;
+    font-size: 1rem;
+    text-decoration: none; }
+
+.plusBorder {
+  border-top: 1px solid #191919; }
+
 .line {
   border-bottom: 1px solid #191919; }
 

@@ -14,7 +14,7 @@ var cookieArray = [
         sku: "0001",
         description: description,
         cookie: "img/bakes/jam_poppy.png",
-        box: greenBox,
+        box: purpleBox,
         broken: "img/bakes/jam_poppy-qv.png"
     },
     {
@@ -32,7 +32,7 @@ var cookieArray = [
         sku: "0003",
         description: description,
         cookie: "img/bakes/oatmeal_bites.png",
-        box: greenBox,
+        box: pinkBox,
         broken: "img/bakes/oatmeal_bites-qv.png"
     },
     {
@@ -214,51 +214,55 @@ function item(place, prev, next){
                                 <p>Quantity</p>
                                 <input type="text" class="col-md-2 my-4" placeholder="1">
                                 <br>
-                                <button class="btnneg w-100"><a href="cart.html">ADD TO CART</a></button>
-                            <div id="accordion">
-                                <div class="card">
-                                    <div class="card-header" id="headingOne">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        PRODUCT INFO
-                                        </button>
-                                    </h5>
-                                    </div>
+                                <button class="btnneg w-100 mb-5"><a href="cart.html">ADD TO CART</a></button>
+<div id="accordion w-100">
+  <div class="card w-100">
+    <div class="card-header plusBorder" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btnCord btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          PRODUCT INFO
+        </button>
+      </h5>
+    </div>
 
-                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                                    <div class="card-body">
-                                        <p>I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item.</p>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingTwo">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        REFUND POLICY
-                                        </button>
-                                    </h5>
-                                    </div>
-                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                                    <div class="card-body">
-                                        <p>I’m a refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase. Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.</p>
-                                    </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingThree">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        SHIPPING INFO
-                                        </button>
-                                    </h5>
-                                    </div>
-                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                                    <div class="card-body">
-                                        <p>I'm a shipping policy. I'm a great place to add more information about your shipping methods, packaging and cost. Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.</p>
-                                    </div>
-                                    </div>
-                                </div>
-                                </div>
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body gray">
+        <p>I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item.
+        </p>    
+    </div>
+    </div>
+  </div>
+  <div class="card w-100">
+    <div class="card-header w-100" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btnCord btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          REFUND POLICY
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body gray">
+        <p>I’m a refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase. Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.
+        </p>  
+      </div>
+    </div>
+  </div>
+  <div class="card w-100">
+    <div class="card-header w-100" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btnCord btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          SHIPPING INFO
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body gray">
+        <p>I'm a shipping policy. I'm a great place to add more information about your shipping methods, packaging and cost. Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.
+        </p>  
+      </div>
+    </div>
+  </div>
+</div>
                             </div>
                         </div>
                     </div>
@@ -287,9 +291,10 @@ function item(place, prev, next){
     <img class="shop-gallery" src="${src}">`);
     });
 
-    // $('#myCollapsible').collapse({
-    //     toggle: false
-    // });
+    $("button").click((event) => {
+        console.log("event", event);
+    } );
+
 }
 
 
