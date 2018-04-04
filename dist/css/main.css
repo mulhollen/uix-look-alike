@@ -14,6 +14,12 @@ body {
   margin-left: auto;
   margin-right: auto; }
 
+#shoppingBag,
+#about {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto; }
+
 .serif {
   font-family: "PT Serif", serif; }
 
@@ -205,5 +211,26 @@ footer {
 .galImg {
   width: 40px;
   height: 40px; }
+
+.smallImg {
+  width: 100px;
+  height: 100px; }
+
+.dot {
+  height: 45px;
+  width: 45px;
+  border: 1px solid teal;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-bottom: -24px;
+  display: inline-block; }
+
+.abtImg {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%; }
+
+.aboutTxt {
+  font-size: 1rem; }
 
 /*# sourceMappingURL=main.css.map */

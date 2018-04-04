@@ -1,10 +1,101 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 
+let $ = require('../lib/node_modules/jquery');
+
+function creditCard() {
+    $("form").empty('');
+    $("form").append(`
+        <form id="form2">
+            <div class="form-group d-flex flex-row">
+                <label class="mr-3 col-md-2 text-right" for="exampleInputEmail1">Card number</label>
+                <input type="email" class="form-control col-md-10" aria-describedby="emailHelp" placeholder="">
+            </div>
+            <div class="form-group d-flex flex-row">
+                <label class="mr-3 col-md-2 text-right" for="exampleInputPassword1">Name on card</label>
+                <input type="password" class="form-control col-md-10" placeholder="">
+            </div>
+            <div class="form-group d-flex flex-row">
+                <label class="mr-3 col-md-2 text-right" for="exampleInputPassword1">Expiration date</label>
+                <input type="password" class="form-control col-md-10" placeholder="">
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Use this card across all of Amazon</label>
+            </div>
+            <div class="d-flex flex-row">
+                <div class="d-flex align-items-center"></div>
+                        <button id="continueOne" type="submit" class="btnneg btn-primary">< Back</button>
+                </div>
+                <div class="d-flex align-items-center"></div>
+                        <button id="continueTwo" type="submit" class="btnneg btn-primary">Continue</button>
+                </div>
+            </div>
+        </form>
+    `);
+}
+
+function myCart() {
+    $("form").empty('');
+    $("form").append(`
+        <form id="form2">
+            <div class="container mb-5">
+                <div class="row  border-bottom border-dark">
+                    <h3 class="col-md-8">My Cart (1)</h3>
+                    <div class="col-md-4 d-flex flex-row justify-content-between">
+                        <p>Price</p>
+                        <p>Qty</p>
+                        <p>Total</p>          
+                    </div>      
+                </div>
+                <div class="row border-bottom border-dark">
+                    <div class="col-md-8 d-flex flex-row">
+                        <img class="smallImg my-5" src="img/bakes/butter.png">
+                        <div class="flex-column ml-3 mt-3">
+                            <h2 class="h4"><b>Butter Cookies</b></h2>
+                            <h2 class="h5">SKU: 0001</h2>
+                            <h2 class="h5">Color: Black</h2>
+                            <a href=""><u>Remove</u></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-between align-items-center">
+                    <p>$2.00</p>
+                    <p>12</p>                    
+                    <p>$24.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-row">            
+                <div class="d-flex align-items-center"></div>
+                        <button id="continueTwo" type="submit" class="btnneg btn-primary">< Back</button>
+                </div>
+                <div class="d-flex align-items-center"></div>
+                        <button id="placeOrder" type="submit" class="btnneg btn-primary">Place Order</button>
+                </div>
+            </div>
+        </form>
+    `);
+}
+
+function finalOrder() {
+    $("form").empty('');
+    $("form").append(`
+        <div class="mt-5 pt-5">
+            <h1 class="text-center">Thank you for your order.</h1>
+            <h3 class="text-center">Your order is scheduled to arrive Friday, June, 15 2018.</h3>
+        </div>
+    `);
+}
+
+module.exports = { creditCard, myCart, finalOrder };
+},{"../lib/node_modules/jquery":5}],2:[function(require,module,exports){
+"use strict";
+
 var description = "I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions.";
 var greenBox = "img/box_1000_green.jpg";
-var pinkBox = "";
-var purpleBox = "";
+var pinkBox = "img/box_pink_1000.jpg";
+var purpleBox = "img/box_1000_purple.jpg";
+var blueBox = "img/box_1000_purple.jpg";
 
 
 var cookieArray = [
@@ -41,7 +132,7 @@ var cookieArray = [
         sku: "0004",
         description: description,
         cookie: "img/bakes/soft_butter.png",
-        box: greenBox,
+        box: blueBox,
         broken: "img/bakes/soft_butter-qv.png"
     },
     {
@@ -50,7 +141,7 @@ var cookieArray = [
         sku: "0005",
         description: description,
         cookie: "img/bakes/parm.png",
-        box: greenBox,
+        box: purpleBox,
         broken: "img/bakes/parm-qv.png"
     },
     {
@@ -68,7 +159,7 @@ var cookieArray = [
         sku: "0007",
         description: description,
         cookie: "img/bakes/jam_bites.png",
-        box: greenBox,
+        box: pinkBox,
         broken: "img/bakes/jam_bites-qv.png"
     },
     {
@@ -77,7 +168,7 @@ var cookieArray = [
         sku: "0008",
         description: description,
         cookie: "img/bakes/choc_chips.png",
-        box: greenBox,
+        box: blueBox,
         broken: "img/bakes/choc_chips-qv.png"
     },
     {
@@ -86,7 +177,7 @@ var cookieArray = [
         sku: "0009",
         description: description,
         cookie: "img/bakes/nuts_caramel.png",
-        box: greenBox,
+        box: purpleBox,
         broken: "img/bakes/nuts_caramel-qv.png"
     },
     {
@@ -104,7 +195,7 @@ var cookieArray = [
         sku: "0011",
         description: description,
         cookie: "img/bakes/pecan_nuts.jpg",
-        box: greenBox,
+        box: pinkBox,
         broken: "img/bakes/pecan_nuts-qv.jpg"
     },
     {
@@ -113,7 +204,7 @@ var cookieArray = [
         sku: "0012",
         description: description,
         cookie: "img/bakes/seeds.jpg",
-        box: greenBox,
+        box: blueBox,
         broken: "img/bakes/seeds-qv.jpg"
     },
 ];
@@ -167,7 +258,7 @@ var insta = [
 ];
 
 module.exports = { cookieArray, bestCookies, insta };
-},{}],2:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 "use strict";
 let $ = require('../lib/node_modules/jquery');
 let main = require('./main');
@@ -215,54 +306,54 @@ function item(place, prev, next){
                                 <input type="text" class="col-md-2 my-4" placeholder="1">
                                 <br>
                                 <button class="btnneg w-100 mb-5"><a href="cart.html">ADD TO CART</a></button>
-<div id="accordion w-100">
-  <div class="card w-100">
-    <div class="card-header plusBorder" id="headingOne">
-      <h5 class="mb-0">
-        <button class="btnCord btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-          PRODUCT INFO
-        </button>
-      </h5>
-    </div>
+                                <div id="accordion w-100">
+                                <div class="card w-100">
+                                    <div class="card-header plusBorder" id="headingOne">
+                                    <h5 class="mb-0">
+                                        <button class="btnCord btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        PRODUCT INFO
+                                        </button>
+                                    </h5>
+                                    </div>
 
-    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-      <div class="card-body gray">
-        <p>I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item.
-        </p>    
-    </div>
-    </div>
-  </div>
-  <div class="card w-100">
-    <div class="card-header w-100" id="headingTwo">
-      <h5 class="mb-0">
-        <button class="btnCord btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          REFUND POLICY
-        </button>
-      </h5>
-    </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-      <div class="card-body gray">
-        <p>I’m a refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase. Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.
-        </p>  
-      </div>
-    </div>
-  </div>
-  <div class="card w-100">
-    <div class="card-header w-100" id="headingThree">
-      <h5 class="mb-0">
-        <button class="btnCord btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          SHIPPING INFO
-        </button>
-      </h5>
-    </div>
-    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-      <div class="card-body gray">
-        <p>I'm a shipping policy. I'm a great place to add more information about your shipping methods, packaging and cost. Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.
-        </p>  
-      </div>
-    </div>
-  </div>
-</div>
+                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="card-body gray">
+                                        <p>I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item.
+                                        </p>    
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="card w-100">
+                                    <div class="card-header w-100" id="headingTwo">
+                                    <h5 class="mb-0">
+                                        <button class="btnCord btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        REFUND POLICY
+                                        </button>
+                                    </h5>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                    <div class="card-body gray">
+                                        <p>I’m a refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase. Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.
+                                        </p>  
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="card w-100">
+                                    <div class="card-header w-100" id="headingThree">
+                                    <h5 class="mb-0">
+                                        <button class="btnCord btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        SHIPPING INFO
+                                        </button>
+                                    </h5>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                    <div class="card-body gray">
+                                        <p>I'm a shipping policy. I'm a great place to add more information about your shipping methods, packaging and cost. Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.
+                                        </p>  
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -300,12 +391,13 @@ function item(place, prev, next){
 
 
 module.exports = { item };
-},{"../lib/node_modules/jquery":4,"./main":3}],3:[function(require,module,exports){
+},{"../lib/node_modules/jquery":5,"./main":4}],4:[function(require,module,exports){
 "use strict";
 
 let $ = require('../lib/node_modules/jquery');
 let cookie = require('./cookie');
 let itemPage = require('./item');
+let checkout = require('./checkout');
 
 function displayCookies(array) {
     $("#main").append(`        
@@ -358,7 +450,17 @@ bestSellers(cookie.bestCookies);
 instagram(cookie.insta);
 displayCookies(cookie.cookieArray);
 
-document.querySelector('#main').addEventListener('click', (event) => {
+document.querySelector('main').addEventListener('click', (event) => {
+    if (event.target.id === "continueOne") {
+        checkout.creditCard();
+    } else if (event.target.id === "continueTwo"){
+        checkout.myCart();
+    } else if (event.target.id === "placeOrder") {
+        checkout.finalOrder();
+    }
+});
+
+document.querySelector('main').addEventListener('click', (event) => {
     if (event.target.id === "0001"){
         itemPage.item(cookie.cookieArray[0], cookie.cookieArray[11].sku, cookie.cookieArray[1].sku);
     } else if (event.target.id === "0002") {
@@ -390,7 +492,10 @@ document.querySelector('#main').addEventListener('click', (event) => {
 
 
 
-},{"../lib/node_modules/jquery":4,"./cookie":1,"./item":2}],4:[function(require,module,exports){
+
+
+
+},{"../lib/node_modules/jquery":5,"./checkout":1,"./cookie":2,"./item":3}],5:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v3.3.1
  * https://jquery.com/
@@ -10756,4 +10861,4 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-},{}]},{},[3]);
+},{}]},{},[4]);
