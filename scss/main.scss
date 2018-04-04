@@ -15,6 +15,28 @@ body {
     margin-right:auto;
 }
 
+#cookieTown {
+    width: 95%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+h1 {
+    font-family: $sans;
+    font-size: 1.75rem;
+    font-weight: 100;
+}
+
+h3 {
+        font-family: $sans;
+        font-size: .75rem;
+    }
+
+p {
+    font-family: $serif;
+    font-size: .75rem;
+}
+
 a {
     color: $black;
     text-decoration: none;
@@ -45,6 +67,10 @@ li {
     background-color: $rose;
 }
 
+.gray {
+    background-color: $gray;
+}
+
 .rose-light {
     background-color: $rose-light;
 }
@@ -61,8 +87,6 @@ li {
 footer {
     color: $black;
     h3 {
-        font-family: $sans;
-        font-size: .75rem;
         padding-left: 2.5rem;
     }
     li {
@@ -74,4 +98,25 @@ footer {
         font-size: .75rem;
         padding-left: 2.5rem;
     }
+}
+
+.shop-img {
+    width: 275px;
+    height: 275px;
+}
+
+.card {
+        position: relative;
+        display: inline-block;
+}
+
+    .card .img-top {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+}
+.card:hover .img-top {
+        display: inline;
 }
