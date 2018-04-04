@@ -167,6 +167,27 @@ footer {
 
 .btn:hover {
     a{
+        color: $black;
+        font-size: 1rem;
+    }
+  background: #fff;
+  text-decoration: none;
+}
+
+.btnneg {
+    a{
+        font-size: 1rem;
+        color: #fff;
+    }
+  font-family: $sans;
+  background: $black;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border-radius: 0;
+}
+
+.btnneg:hover {
+    a{
         color: #fff;
         font-size: 1rem;
     }

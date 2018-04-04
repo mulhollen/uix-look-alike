@@ -124,9 +124,26 @@ footer {
     font-size: 1rem; }
 
 .btn:hover {
-  background: #191919;
+  background: #fff;
   text-decoration: none; }
   .btn:hover a {
+    color: #191919;
+    font-size: 1rem; }
+
+.btnneg {
+  font-family: "Nunito", sans-serif;
+  background: #191919;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border-radius: 0; }
+  .btnneg a {
+    font-size: 1rem;
+    color: #fff; }
+
+.btnneg:hover {
+  background: #191919;
+  text-decoration: none; }
+  .btnneg:hover a {
     color: #fff;
     font-size: 1rem; }
 

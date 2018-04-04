@@ -196,7 +196,7 @@ function item(place, prev, next){
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-7">
                             <div id="imgExpand">
                                 <img class="shop-gallery" src="${place.cookie}">
                             </div>
@@ -207,13 +207,58 @@ function item(place, prev, next){
                             </div>
                             <p>${place.description}</p>
                         </div>
-                            <div class="col-md-6">
+                            <div class="col-md-5">
                                 <h1>${place.name}</h1>
                                 <h3>SKU: ${place.sku}</h3>
                                 <h4>${place.price}</h4>
                                 <p>Quantity</p>
-                                <input type="text">
-                                <button text="ADD TO CART"></button>
+                                <input type="text" class="col-md-2 my-4" placeholder="1">
+                                <br>
+                                <button class="btnneg w-100"><a href="cart.html">ADD TO CART</a></button>
+                            <div id="accordion">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        PRODUCT INFO
+                                        </button>
+                                    </h5>
+                                    </div>
+
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item.</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingTwo">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        REFUND POLICY
+                                        </button>
+                                    </h5>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>I’m a refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase. Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.</p>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingThree">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        SHIPPING INFO
+                                        </button>
+                                    </h5>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>I'm a shipping policy. I'm a great place to add more information about your shipping methods, packaging and cost. Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.</p>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -221,6 +266,30 @@ function item(place, prev, next){
             </div>
         </div>
     `);
+    $("#broken").click((event) => {
+        var src = $("#broken").attr('src');
+        $("#imgExpand").empty('');
+        $("#imgExpand").append(`
+    <img class="shop-gallery" src="${src}">`);
+    });
+
+    $("#cookie").click((event) => {
+        var src = $("#cookie").attr('src');
+        $("#imgExpand").empty('');
+        $("#imgExpand").append(`
+    <img class="shop-gallery" src="${src}">`);
+    });
+
+    $("#box").click((event) => {
+        var src = $("#box").attr('src');
+        $("#imgExpand").empty('');
+        $("#imgExpand").append(`
+    <img class="shop-gallery" src="${src}">`);
+    });
+
+    // $('#myCollapsible').collapse({
+    //     toggle: false
+    // });
 }
 
 
@@ -274,7 +343,7 @@ function instagram(array) {
     for (let i = 0; i < 6; i++) {
         $("#instagram").append(`
             <div class="row col-md-3 m-3">
-                    <img class="insta-img m-1" src="${array[i].cookie}"> 
+                <img class="insta-img m-1" src="${array[i].cookie}"> 
             </div>
         `);
     }
@@ -312,26 +381,8 @@ document.querySelector('#main').addEventListener('click', (event) => {
     }
 });
 
-$("#broken").click((event) => {
-    var src = $("#broken").attr('src');
-    $("#imgExpand").empty('');
-    $("#imgExpand").append(`
-    <img class="shop-gallery" src="${src}">`);
-});
 
-$("#cookie").click((event) => {
-    var src = $("#cookie").attr('src');
-    $("#imgExpand").empty('');
-    $("#imgExpand").append(`
-    <img class="shop-gallery" src="${src}">`);
-});
 
-$("#box").click((event) => {
-    var src = $("#box").attr('src');
-    $("#imgExpand").empty('');
-    $("#imgExpand").append(`
-    <img class="shop-gallery" src="${src}">`);
-});
 
 
 },{"../lib/node_modules/jquery":4,"./cookie":1,"./item":2}],4:[function(require,module,exports){
