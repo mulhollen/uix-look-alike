@@ -179,6 +179,8 @@ function displayCookies(array) {
 
 }
 
+displayCookies(cookie.cookieArray);
+
 document.querySelector('#cookieTown').addEventListener('click', (event) => {
     if (event.target.id === "0001"){
         itemPage.item(cookie.cookieArray[0], cookie.cookieArray[11].sku, cookie.cookieArray[1].sku);
@@ -208,7 +210,6 @@ document.querySelector('#cookieTown').addEventListener('click', (event) => {
 });
 
 
-displayCookies(cookie.cookieArray);
 },{"../lib/node_modules/jquery":4,"./cookie":1,"./item":2}],4:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v3.3.1

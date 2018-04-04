@@ -21,10 +21,26 @@ body {
     margin-right:auto;
 }
 
+.serif {
+    font-family: $serif;
+}
+
+.mainH1 {
+  position: absolute;
+  color: #fff;
+  top: 25%;
+  left: 10%;
+  z-index: 20;
+}
+
 h1 {
     font-family: $sans;
     font-size: 1.75rem;
     font-weight: 100;
+}
+
+.h1-lrg {
+    font-size: 3rem;
 }
 
 h3 {
@@ -119,4 +135,25 @@ footer {
 }
 .card:hover .img-top {
         display: inline;
+}
+
+.btn {
+    a{
+        font-size: 1rem;
+    }
+  font-family: $sans;
+  color: $black;
+  background: #ffffff;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border-radius: 0;
+}
+
+.btn:hover {
+    a{
+        color: #fff;
+        font-size: 1rem;
+    }
+  background: $black;
+  text-decoration: none;
 }
