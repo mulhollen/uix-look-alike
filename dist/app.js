@@ -2,6 +2,10 @@
 "use strict";
 
 var description = "I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions.";
+var greenBox = "img/box_1000_green.jpg";
+var pinkBox = "";
+var purpleBox = "";
+
 
 var cookieArray = [
     {
@@ -10,6 +14,7 @@ var cookieArray = [
         sku: "0001",
         description: description,
         cookie: "img/bakes/jam_poppy.png",
+        box: purpleBox,
         broken: "img/bakes/jam_poppy-qv.png"
     },
     {
@@ -17,8 +22,110 @@ var cookieArray = [
         price: "$2.00",
         sku: "0002",
         description: description,
-        cookie: "img/bakes/poppy_seeds.png",
+        cookie: "img/bakes/poppy_seeds.png", 
+        box: greenBox,
         broken: "img/bakes/poppy_seeds-qv.png"
+    },
+    {
+        name: "OATMEAL BITES",
+        price: "$2.00",
+        sku: "0003",
+        description: description,
+        cookie: "img/bakes/oatmeal_bites.png",
+        box: pinkBox,
+        broken: "img/bakes/oatmeal_bites-qv.png"
+    },
+    {
+        name: "SOFT BUTTER COOKIES",
+        price: "$2.00",
+        sku: "0004",
+        description: description,
+        cookie: "img/bakes/soft_butter.png",
+        box: greenBox,
+        broken: "img/bakes/soft_butter-qv.png"
+    },
+    {
+        name: "PARMESAN BITES",
+        price: "$2.00",
+        sku: "0005",
+        description: description,
+        cookie: "img/bakes/parm.png",
+        box: greenBox,
+        broken: "img/bakes/parm-qv.png"
+    },
+    {
+        name: "WHITE CHOCOLATE BITES",
+        price: "$1.00",
+        sku: "0006",
+        description: description,
+        cookie: "img/bakes/white_choc.png",
+        box: greenBox,
+        broken: "img/bakes/white_choc-qv.png"
+    },
+    {
+        name: "JAM BITES",
+        price: "$1.00",
+        sku: "0007",
+        description: description,
+        cookie: "img/bakes/jam_bites.png",
+        box: greenBox,
+        broken: "img/bakes/jam_bites-qv.png"
+    },
+    {
+        name: "CHOCOLATE CHIPS",
+        price: "$2.00",
+        sku: "0008",
+        description: description,
+        cookie: "img/bakes/choc_chips.png",
+        box: greenBox,
+        broken: "img/bakes/choc_chips-qv.png"
+    },
+    {
+        name: "NUTS & CARAMEL BITES",
+        price: "$2.00",
+        sku: "0009",
+        description: description,
+        cookie: "img/bakes/nuts_caramel.png",
+        box: greenBox,
+        broken: "img/bakes/nuts_caramel-qv.png"
+    },
+    {
+        name: "BUTTER COOKIES",
+        price: "$1.00",
+        sku: "0010",
+        description: description,
+        cookie: "img/bakes/butter.png",
+        box: greenBox,
+        broken: "img/bakes/butter-qv.png"
+    },
+    {
+        name: "PECAN NUT BITES",
+        price: "$2.00",
+        sku: "0011",
+        description: description,
+        cookie: "img/bakes/pecan_nuts.jpg",
+        box: greenBox,
+        broken: "img/bakes/pecan_nuts-qv.jpg"
+    },
+    {
+        name: "SEED BITES",
+        price: "$2.00",
+        sku: "0012",
+        description: description,
+        cookie: "img/bakes/seeds.jpg",
+        box: greenBox,
+        broken: "img/bakes/seeds-qv.jpg"
+    },
+];
+
+var bestCookies = [
+    {
+        name: "WHITE CHOCOLATE BITES",
+        price: "$1.00",
+        sku: "0006",
+        description: description,
+        cookie: "img/bakes/white_choc.png",
+        broken: "img/bakes/white_choc-qv.png"
     },
     {
         name: "OATMEAL BITES",
@@ -29,80 +136,37 @@ var cookieArray = [
         broken: "img/bakes/oatmeal_bites-qv.png"
     },
     {
-        name: "SOFT BUTTER COOKIES",
-        price: "$2.00",
-        sku: "0004",
-        description: description,
-        cookie: "img/bakes/soft_butter.png",
-        broken: "img/bakes/soft_butter-qv.png"
-    },
-    {
-        name: "PARMESAN BITES",
-        price: "$2.00",
-        sku: "0005",
-        description: description,
-        cookie: "img/bakes/parm.png",
-        broken: "img/bakes/parm-qv.png"
-    },
-    {
-        name: "WHITE CHOCOLATE BITES",
+        name: "JAM & POPPY SEED BITES",
         price: "$1.00",
-        sku: "0006",
+        sku: "0001",
         description: description,
-        cookie: "img/bakes/white_choc.png",
-        broken: "img/bakes/white_choc-qv.png"
+        cookie: "img/bakes/jam_poppy.png",
+        broken: "img/bakes/jam_poppy-qv.png"
+    }
+];
+
+var insta = [
+    {
+        cookie: "img/insta/bowls.jpg"
     },
     {
-        name: "JAM BITES",
-        price: "$1.00",
-        sku: "0007",
-        description: description,
-        cookie: "img/bakes/jam_bites.png",
-        broken: "img/bakes/jam_bites-qv.png"
+        cookie: "img/insta/spoon.jpg"
     },
     {
-        name: "CHOCOLATE CHIPS",
-        price: "$2.00",
-        sku: "0008",
-        description: description,
-        cookie: "img/bakes/choc_chips.png",
-        broken: "img/bakes/choc_chips-qv.png"
+        cookie: "img/insta/oranges.jpg"
     },
     {
-        name: "NUTS & CARAMEL BITES",
-        price: "$2.00",
-        sku: "0009",
-        description: description,
-        cookie: "img/bakes/nuts_caramel.png",
-        broken: "img/bakes/nuts_caramel-qv.png"
+        cookie: "img/insta/choc_cookies.jpg"
     },
     {
-        name: "BUTTER COOKIES",
-        price: "$1.00",
-        sku: "0010",
-        description: description,
-        cookie: "img/bakes/butter.png",
-        broken: "img/bakes/butter-qv.png"
+        cookie: "img/insta/ingredients.jpg"
     },
     {
-        name: "PECAN NUT BITES",
-        price: "$2.00",
-        sku: "0011",
-        description: description,
-        cookie: "img/bakes/pecan_nuts.jpg",
-        broken: "img/bakes/pecan_nuts-qv.jpg"
-    },
-    {
-        name: "SEED BITES",
-        price: "$2.00",
-        sku: "0012",
-        description: description,
-        cookie: "img/bakes/seeds.jpg",
-        broken: "img/bakes/seeds-qv.jpg"
+        cookie: "img/insta/crackers.jpg"
     },
 ];
 
-module.exports = { cookieArray };
+module.exports = { cookieArray, bestCookies, insta };
 },{}],2:[function(require,module,exports){
 "use strict";
 let $ = require('../lib/node_modules/jquery');
@@ -112,41 +176,128 @@ function item(place, prev, next){
     $("#cookiePick").empty('');
     console.log("have i made it here?");
     $("#cookiePick").append(`
-        <div class="gray">
-            <div class="d-flex justify-content-between">
-                <div class="flex-row">
-                    <a href="index.html">Home</a>
-                    <p> / </p>
-                    <a href="shop.html">SHOP</a>
-                    <p> / </p>
-                    <p class="text-capitalize">${place.name}</p>                        
+        <div class= "gray pt-5">
+            <div id="itemPage" class="pt-5">
+                <div class="d-flex justify-content-between px-3">
+                    <div class="d-flex flex-row">
+                        <a href="index.html">Home</a>
+                        <p> / </p>
+                        <a href="shop.html">SHOP</a>
+                        <p> / </p>
+                        <p class="text-capitalize">${place.name}</p>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <p> < </p>
+                            <a href="" id="${prev}">Prev</a>
+                            <p> | </p>
+                            <a href="" id="${next}">Next</a>
+                            <p> > </p>
+                    </div>
                 </div>
-                <div class="flex-row">
-                    <p> < </p>
-                    <a href="" id="${prev}">Prev</a>
-                    <p> | </p>
-                    <a href="" id="${next}">Next</a>
-                    <p> > </p>                        
-                </div>
-            <div>
-                <div>
-                    // needs to be bootstrap gallery
-                    <img src="${place.cookie}">
-                    <p>${place.description}</p>
-                </div>
-                <div>
-                    <h1>${place.name}</h1>
-                    <h3>SKU: ${place.sku}</h3>
-                    <h4>${place.price}</h4>
-                    <p>Quantity</p>
-                    <input type="text">
-                    <button text="ADD TO CART>
-                    //  accordian
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div id="imgExpand">
+                                <img class="shop-gallery" src="${place.cookie}">
+                            </div>
+                            <div class="my-4">
+                                <button class="galBtn p-0 mr-1"><img id="cookie" class="galImg m-0 p-0" src="${place.cookie}"></button>
+                                <button class="galBtn p-0 mx-1"><img id="broken" class="galImg m-0 p-0" src="${place.broken}"></button>
+                                <button class="galBtn p-0 ml-1"><img id="box" class="galImg m-0 p-0" src="${place.box}"></button> 
+                            </div>
+                            <p>${place.description}</p>
+                        </div>
+                            <div class="col-md-5">
+                                <h1>${place.name}</h1>
+                                <h3>SKU: ${place.sku}</h3>
+                                <h4>${place.price}</h4>
+                                <p>Quantity</p>
+                                <input type="text" class="col-md-2 my-4" placeholder="1">
+                                <br>
+                                <button class="btnneg w-100 mb-5"><a href="cart.html">ADD TO CART</a></button>
+<div id="accordion w-100">
+  <div class="card w-100">
+    <div class="card-header plusBorder" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btnCord btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          PRODUCT INFO
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body gray">
+        <p>I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item.
+        </p>    
+    </div>
+    </div>
+  </div>
+  <div class="card w-100">
+    <div class="card-header w-100" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btnCord btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          REFUND POLICY
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body gray">
+        <p>I’m a refund policy. I’m a great place to let your customers know what to do in case they are dissatisfied with their purchase. Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.
+        </p>  
+      </div>
+    </div>
+  </div>
+  <div class="card w-100">
+    <div class="card-header w-100" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btnCord btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          SHIPPING INFO
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body gray">
+        <p>I'm a shipping policy. I'm a great place to add more information about your shipping methods, packaging and cost. Providing straightforward information about your shipping policy is a great way to build trust and reassure your customers that they can buy from you with confidence.
+        </p>  
+      </div>
+    </div>
+  </div>
+</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     `);
+    $("#broken").click((event) => {
+        var src = $("#broken").attr('src');
+        $("#imgExpand").empty('');
+        $("#imgExpand").append(`
+    <img class="shop-gallery" src="${src}">`);
+    });
+
+    $("#cookie").click((event) => {
+        var src = $("#cookie").attr('src');
+        $("#imgExpand").empty('');
+        $("#imgExpand").append(`
+    <img class="shop-gallery" src="${src}">`);
+    });
+
+    $("#box").click((event) => {
+        var src = $("#box").attr('src');
+        $("#imgExpand").empty('');
+        $("#imgExpand").append(`
+    <img class="shop-gallery" src="${src}">`);
+    });
+
+    $("button").click((event) => {
+        console.log("event", event);
+    } );
+
 }
+
+
 
 module.exports = { item };
 },{"../lib/node_modules/jquery":4,"./main":3}],3:[function(require,module,exports){
@@ -169,7 +320,7 @@ function displayCookies(array) {
             $("#cookieTown").append(`
                 <div class="row col-md-4">
                     <div class="d-flex flex-column">
-                        <img id="${array[i].sku}" class="shop-img m-1" src="${array[i].cookie}" onmouseover="this.src='${array[i].broken}'" onmouseout="this.src='${array[i].cookie}'"> 
+                        <img id="${array[i].sku}" class="insta-img shop-img m-1" src="${array[i].cookie}" onmouseover="this.src='${array[i].broken}'" onmouseout="this.src='${array[i].cookie}'"> 
                         <h3 class="text-center">${array[i].name}</h3>
                         <p class="text-center">${array[i].price}</p>
                     </div>
@@ -179,9 +330,35 @@ function displayCookies(array) {
 
 }
 
+function bestSellers(array) {
+    for (let i = 0; i < 3; i++) {
+        $("#bestSellers").append(`
+            <div class="row col-md-4 mx-2 mb-5">
+                <div class="d-flex flex-column">
+                    <img id="${array[i].sku}" class="shop-img m-1" src="${array[i].cookie}" onmouseover="this.src='${array[i].broken}'" onmouseout="this.src='${array[i].cookie}'"> 
+                    <h3 class="text-center">${array[i].name}</h3>
+                    <p class="text-center">${array[i].price}</p>
+                </div>
+            </div>
+        `);
+    }
+}
+
+function instagram(array) {
+    for (let i = 0; i < 6; i++) {
+        $("#instagram").append(`
+            <div class="row col-md-3 m-3">
+                <img class="insta-img m-1" src="${array[i].cookie}"> 
+            </div>
+        `);
+    }
+}
+
+bestSellers(cookie.bestCookies);
+instagram(cookie.insta);
 displayCookies(cookie.cookieArray);
 
-document.querySelector('#cookieTown').addEventListener('click', (event) => {
+document.querySelector('#main').addEventListener('click', (event) => {
     if (event.target.id === "0001"){
         itemPage.item(cookie.cookieArray[0], cookie.cookieArray[11].sku, cookie.cookieArray[1].sku);
     } else if (event.target.id === "0002") {
@@ -208,6 +385,9 @@ document.querySelector('#cookieTown').addEventListener('click', (event) => {
         itemPage.item(cookie.cookieArray[11], cookie.cookieArray[10].sku, cookie.cookieArray[1].sku);
     }
 });
+
+
+
 
 
 },{"../lib/node_modules/jquery":4,"./cookie":1,"./item":2}],4:[function(require,module,exports){

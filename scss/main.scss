@@ -15,8 +15,15 @@ body {
     margin-right:auto;
 }
 
-#cookieTown {
+#cookieTown,
+#bestSellers {
     width: 95%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#itemPage {
+    width: 85%;
     margin-left:auto;
     margin-right:auto;
 }
@@ -41,6 +48,11 @@ h1 {
 
 .h1-lrg {
     font-size: 3rem;
+}
+
+h2 {
+    font-family: $sans;
+    font-size: 1.75rem;
 }
 
 h3 {
@@ -117,8 +129,12 @@ footer {
 }
 
 .shop-img {
-    width: 275px;
-    height: 275px;
+    width: 100%;
+}
+
+.insta-img {
+    width: 17rem;
+    height: 17rem;
 }
 
 .card {
@@ -151,9 +167,99 @@ footer {
 
 .btn:hover {
     a{
+        color: $black;
+        font-size: 1rem;
+    }
+  background: #fff;
+  text-decoration: none;
+}
+
+.btnneg {
+    a{
+        font-size: 1rem;
+        color: #fff;
+    }
+  font-family: $sans;
+  background: $black;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border-radius: 0;
+}
+
+.btnneg:hover {
+    a{
         color: #fff;
         font-size: 1rem;
     }
   background: $black;
   text-decoration: none;
+}
+
+#accordion {
+    border-top: 1px solid $black;
+}
+
+.card-header {
+    background-color: $gray;
+    box-shadow: none;
+    border-bottom: 1px solid $black;
+}
+
+.btnCord,
+.btnCord:active,
+.btnCord:hover {
+    a{
+        color: $black;
+        font-size: 1rem;
+        text-decoration: none;
+    }
+    font-size: 1rem;
+    color: $black;
+    font-family: $sans;
+    background: $gray;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 0;
+}
+
+.plusBorder {
+    border-top: 1px solid $black;
+}
+
+.card {
+    border: none;
+}
+
+.line {
+    border-bottom: 1px solid $black;
+}
+
+.borderBtn {
+    a{
+        font-size: .75rem;
+    }
+  font-family: $sans;
+  color: $black;
+  background: #ffffff;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border: 1px solid $black;
+  border-radius: 0;
+  margin-bottom: -25px;
+}
+
+.shop-gallery {
+    width: 100%;
+}
+
+.galBtn {
+    width: 40px;
+    border: none;
+    background: none;
+}
+
+.galImg {
+    width: 40px;
+    height: 40px;
 }

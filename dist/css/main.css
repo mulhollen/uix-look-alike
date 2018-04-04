@@ -3,8 +3,14 @@ body {
   margin-left: auto;
   margin-right: auto; }
 
-#cookieTown {
+#cookieTown,
+#bestSellers {
   width: 95%;
+  margin-left: auto;
+  margin-right: auto; }
+
+#itemPage {
+  width: 85%;
   margin-left: auto;
   margin-right: auto; }
 
@@ -25,6 +31,10 @@ h1 {
 
 .h1-lrg {
   font-size: 3rem; }
+
+h2 {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.75rem; }
 
 h3 {
   font-family: "Nunito", sans-serif;
@@ -83,8 +93,11 @@ footer {
     padding-left: 2.5rem; }
 
 .shop-img {
-  width: 275px;
-  height: 275px; }
+  width: 100%; }
+
+.insta-img {
+  width: 17rem;
+  height: 17rem; }
 
 .card {
   position: relative;
@@ -111,10 +124,86 @@ footer {
     font-size: 1rem; }
 
 .btn:hover {
-  background: #191919;
+  background: #fff;
   text-decoration: none; }
   .btn:hover a {
+    color: #191919;
+    font-size: 1rem; }
+
+.btnneg {
+  font-family: "Nunito", sans-serif;
+  background: #191919;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border-radius: 0; }
+  .btnneg a {
+    font-size: 1rem;
+    color: #fff; }
+
+.btnneg:hover {
+  background: #191919;
+  text-decoration: none; }
+  .btnneg:hover a {
     color: #fff;
     font-size: 1rem; }
+
+#accordion {
+  border-top: 1px solid #191919; }
+
+.card-header {
+  background-color: #f3f3f5;
+  box-shadow: none;
+  border-bottom: 1px solid #191919; }
+
+.btnCord,
+.btnCord:active,
+.btnCord:hover {
+  font-size: 1rem;
+  color: #191919;
+  font-family: "Nunito", sans-serif;
+  background: #f3f3f5;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 0; }
+  .btnCord a,
+  .btnCord:active a,
+  .btnCord:hover a {
+    color: #191919;
+    font-size: 1rem;
+    text-decoration: none; }
+
+.plusBorder {
+  border-top: 1px solid #191919; }
+
+.card {
+  border: none; }
+
+.line {
+  border-bottom: 1px solid #191919; }
+
+.borderBtn {
+  font-family: "Nunito", sans-serif;
+  color: #191919;
+  background: #ffffff;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border: 1px solid #191919;
+  border-radius: 0;
+  margin-bottom: -25px; }
+  .borderBtn a {
+    font-size: .75rem; }
+
+.shop-gallery {
+  width: 100%; }
+
+.galBtn {
+  width: 40px;
+  border: none;
+  background: none; }
+
+.galImg {
+  width: 40px;
+  height: 40px; }
 
 /*# sourceMappingURL=main.css.map */
