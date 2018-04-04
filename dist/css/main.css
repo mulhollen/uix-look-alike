@@ -176,6 +176,9 @@ footer {
 .plusBorder {
   border-top: 1px solid #191919; }
 
+.card {
+  border: none; }
+
 .line {
   border-bottom: 1px solid #191919; }
 
