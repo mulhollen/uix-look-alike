@@ -1,0 +1,17 @@
+a,
+a:hover {
+  color: #191919;
+  text-decoration: none; }
+
+a:active {
+  color: #f6d9ea; }
+
+.body-max {
+  max-width: 85%; }
+
+.title {
+  font-size: 1.5rem;
+  font-family: "PT Serif", serif;
+  color: #191919; }
+
+/*# sourceMappingURL=main.css.map */
