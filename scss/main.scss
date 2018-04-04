@@ -7,10 +7,21 @@ $mint: #c0e8dd;
 $rose: #f6d9ea;
 $lilac: #d2d5ea;
 $gray: #f3f3f5;
+$rose-light: #fbf1f7;
 
-a,
+body {
+    width: 85%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+a {
+    color: $black;
+    text-decoration: none;
+    font-size: .75rem;
+}
+
 a:hover {
-    // font-size: 1rem;
     color: $black;
     text-decoration: none;
 }
@@ -19,12 +30,48 @@ a:active {
     color: $rose;
 }
 
-.body-max {
-max-width: 85%;
+li {
+    list-style-type: none;
 }
+
 
 .title {
     font-size: 1.5rem;
     font-family: $serif;
     color: $black;
+}
+
+.rose {
+    background-color: $rose;
+}
+
+.rose-light {
+    background-color: $rose-light;
+}
+
+.rose-text {
+    color: $rose;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+}
+
+footer {
+    color: $black;
+    h3 {
+        font-family: $sans;
+        font-size: .75rem;
+        padding-left: 2.5rem;
+    }
+    li {
+        font-family: $serif;
+        font-size: .75rem;
+    }
+    p {
+        font-family: $serif;
+        font-size: .75rem;
+        padding-left: 2.5rem;
+    }
 }
