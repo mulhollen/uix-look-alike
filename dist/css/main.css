@@ -3,6 +3,19 @@ body {
   margin-left: auto;
   margin-right: auto; }
 
+#cookieTown {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto; }
+
+h3 {
+  font-family: "Nunito", sans-serif;
+  font-size: .75rem; }
+
+p {
+  font-family: "PT Serif", serif;
+  font-size: .75rem; }
+
 a {
   color: #191919;
   text-decoration: none;
@@ -26,6 +39,9 @@ li {
 .rose {
   background-color: #f6d9ea; }
 
+.gray {
+  background-color: #f3f3f5; }
+
 .rose-light {
   background-color: #fbf1f7; }
 
@@ -39,8 +55,6 @@ li {
 footer {
   color: #191919; }
   footer h3 {
-    font-family: "Nunito", sans-serif;
-    font-size: .75rem;
     padding-left: 2.5rem; }
   footer li {
     font-family: "PT Serif", serif;
@@ -49,5 +63,9 @@ footer {
     font-family: "PT Serif", serif;
     font-size: .75rem;
     padding-left: 2.5rem; }
+
+.shop-img {
+  width: 275px;
+  height: 275px; }
 
 /*# sourceMappingURL=main.css.map */
