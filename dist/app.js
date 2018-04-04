@@ -89,16 +89,16 @@ var cookieArray = [
         price: "$2.00",
         sku: "0011",
         description: description,
-        cookie: "img/bakes/pecan_nuts.png",
-        broken: "img/bakes/pecan_nuts-qv.png"
+        cookie: "img/bakes/pecan_nuts.jpg",
+        broken: "img/bakes/pecan_nuts-qv.jpg"
     },
     {
         name: "SEED BITES",
         price: "$2.00",
         sku: "0012",
         description: description,
-        cookie: "img/bakes/pecan_nuts.png",
-        broken: "img/bakes/pecan_nuts-qv.png"
+        cookie: "img/bakes/seeds.jpg",
+        broken: "img/bakes/seeds-qv.jpg"
     },
 ];
 
@@ -111,17 +111,16 @@ let cookie = require('./cookie');
 
 
 function displayCookies(array) {
-    console.log("are we making it to the functio?");
+    console.log("ummmm hello?");
     $("#main").append(`        
-        <div class="gray">
-            <h1 class="text-capitalize pt-5 pb-3">Pick your cookies</h1>
+        <div class="gray py-5 mb-0">
+            <h1 class="text-capitalize pt-5 pb-0">Pick your cookies</h1>
             <div class="d-flex body-max justify-content-around my-5">
-                <div id="cookieTown" class="d-flex flex-row align-items-center justify-content-center row">
+                <div id="cookieTown" class="d-flex flex-row justify-content-center align-items-center row">
                 </div>
             </div>
         </div>`);
     for (let i = 0; i < array.length; i++){
-        if (i < 3) {
             $("#cookieTown").append(`
                 <div class="row col-md-4">
                     <div id="${array[i].sku}" class="d-flex flex-column">
@@ -131,7 +130,6 @@ function displayCookies(array) {
                     </div>
                 </div>
             `);
-        }
     }
 }
 

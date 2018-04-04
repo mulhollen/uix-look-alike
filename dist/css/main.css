@@ -8,6 +8,11 @@ body {
   margin-left: auto;
   margin-right: auto; }
 
+h1 {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 100; }
+
 h3 {
   font-family: "Nunito", sans-serif;
   font-size: .75rem; }
